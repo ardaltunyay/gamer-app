@@ -31,4 +31,9 @@
         <item name="android:textAllCaps">false</item>
     </style>
 
+    <!-- Animations -->
+    <style name="AppWindowAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
 </resources>
