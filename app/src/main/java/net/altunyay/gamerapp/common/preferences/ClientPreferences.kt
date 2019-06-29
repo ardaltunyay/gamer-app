@@ -1,4 +1,4 @@
-package net.altunyay.gamerapp.common.utils
+package net.altunyay.gamerapp.common.preferences
 
 import android.content.Context
 

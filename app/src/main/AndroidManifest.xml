@@ -16,14 +16,20 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme.Light"
             tools:ignore="GoogleAppIndexingWarning, allowBackup">
-        <activity android:name="net.altunyay.gamerapp.features.settings.SettingsActivity">
-        </activity>
-        <activity android:name="net.altunyay.gamerapp.features.MainActivity">
+        <activity
+                android:name=".features.splash.SplashActivity"
+                android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity
+                android:name=".features.settings.SettingsActivity"
+                android:launchMode="singleTask">
+        </activity>
+        <activity
+                android:name=".features.gameList.GameListActivity">
         </activity>
     </application>
 

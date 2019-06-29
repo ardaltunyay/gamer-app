@@ -4,15 +4,13 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.multidex.MultiDexApplication
 import net.altunyay.gamerapp.di.appModule
 import net.altunyay.gamerapp.di.networkModule
-import net.altunyay.gamerapp.common.utils.ClientPreferences
-import org.koin.android.ext.android.inject
+import net.altunyay.gamerapp.common.preferences.ClientPreferences
+import org.koin.android.ext.android.get
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 
 class App : MultiDexApplication() {
-
-    private val preferences : ClientPreferences by inject()
 
     override fun onCreate() {
         super.onCreate()
@@ -23,12 +21,15 @@ class App : MultiDexApplication() {
             modules(listOfModules)
         }
 
-        if(preferences.isDarkModeEnabled()) {
+        val preferences: ClientPreferences = get()
+        if (preferences.isDarkModeEnabled())
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-        } else {
+        else
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        }
     }
 }
 
-val listOfModules = listOf(appModule, networkModule)
+val listOfModules = listOf(
+    appModule,
+    networkModule
+)
