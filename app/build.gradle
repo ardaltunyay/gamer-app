@@ -20,10 +20,12 @@ android {
     buildTypes {
         debug {
             buildConfigField 'String', 'BASE_URL', "\"http://api-v3.igdb.com/\""
+            buildConfigField 'String', 'USER_KEY', "\"ENTER YOUR USER KEY\""
 
         }
         release {
             buildConfigField 'String', 'BASE_URL', "\"http://api-v3.igdb.com/\""
+            buildConfigField 'String', 'USER_KEY', "\"ENTER YOUR USER KEY\""
 
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -69,6 +71,10 @@ dependencies {
     //Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.1'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.2.1'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    kapt 'com.github.bumptech.glide:compiler:4.9.0'
 
     //Test
     testİmplementation 'junit:junit:4.12'
