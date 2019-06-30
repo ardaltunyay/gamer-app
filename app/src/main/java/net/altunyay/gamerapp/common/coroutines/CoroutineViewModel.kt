@@ -3,7 +3,7 @@ package net.altunyay.gamerapp.common.coroutines
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.*
 
-abstract class CoroutineViewModel(private val schedulerProvider: SchedulerProvider) : ViewModel() {
+abstract class CoroutineViewModel(private val schedulerProvider: ISchedulerProvider) : ViewModel() {
 
     private var jobs = listOf<Job>()
 

@@ -9,7 +9,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-fun createRequestInterceptor(): Interceptor = DefaultRequestInterceptor()
+fun createRequestInterceptor(): DefaultRequestInterceptor = DefaultRequestInterceptor()
 
 fun createHttpLoggingInterceptor(): HttpLoggingInterceptor =
     HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
