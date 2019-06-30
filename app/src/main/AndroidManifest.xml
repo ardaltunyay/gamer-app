@@ -29,7 +29,7 @@
                 android:launchMode="singleTask">
         </activity>
         <activity
-                android:name=".features.gameList.GameListActivity">
+                android:name=".features.games.GamesActivity">
         </activity>
     </application>
 
